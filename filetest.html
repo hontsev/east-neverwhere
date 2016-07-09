@@ -17,7 +17,7 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body style="background-image:url(image/bg.jpg);background-repeat:no-repeat; background-attachment:fixed;background-size:cover">
+  <body style="background-image:url(image/bg.jpg);background-repeat:no-repeat; background-attachment:fixed">
   <nav class="navbar navbar-inverse" role="navigation">
    <div class="navbar-header">
       <a class="navbar-brand" href="http://eastneverwhere.party/">乌有乡 - East Neverwhere</a>
@@ -58,75 +58,12 @@
 </nav>
 <div id="menubarContent"></div>
       <div class="container">
-	  <div class="col-md-12" style="padding-bottom:0px">
-			<h2 class="form-signin-heading" style="color:#fff"><b>乌有乡 - 入口</b></h2>
+		<div class="col-md-12" style="padding-bottom:100px">
+			<h2 class="form-signin-heading" style="color:#fff"><b>乌有乡 - 文件操作测试</b></h2>
 			<font style="color:#fff;" >坚持信仰，爱将永生。</font>
-		</div>		
+		</div>
 	  <div class="col-md-12">
-		<div class="box">
-
-		<div class="lineF">
-			<div class="boxF">
-				<div class="boxS">
-					<div class="boxT" style="background-image: url(image/home_1.jpg);">
-						<div class="overlay">
-							<a href="#">摸鱼</a>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-			<div class="boxF">
-				<div class="boxS">
-					<div class="boxT" style="background-image: url(image/home_2.jpg);">
-						<div class="overlay">
-							<a href="#">东方栀子</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="boxF">
-				<div class="boxS">
-					<div class="boxT" style="background-image: url(image/home_3.jpg);">
-						<div class="overlay">
-							<a href="#">乌有乡</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-
-		<div class="lineS">
-			<div class="boxF">
-				<div class="boxS">
-					<div class="boxT" style="background-image: url(image/home_4.jpg);">
-						<div class="overlay">
-							<a href="#">猎奇向</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="boxF">
-				<div class="boxS">
-					<div class="boxT" style="background-image: url(image/home_5.jpg);">
-						<div class="overlay">
-							<a href="#">无知即力量</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="boxF">
-				<div class="boxS">
-					<div class="boxT" style="background-image: url(image/home_6.jpg);">
-						<div class="overlay">
-							<a href="#">H作品</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		</div>
+		<input type="file" id="file" onchange="handleFiles(this.files)"/>
 		
 	  </div>
 	  
@@ -134,7 +71,24 @@
     </div> <!-- /container -->
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-	<script>
+	<script>		
+		function handleFiles(files) {
+			if (files.length) {
+				var file = files[0];
+				var reader = new FileReader();
+				if (/text\/\w+/.test(file.type)) {
+					reader.onload = function() {
+						$('<pre>' + this.result + '</pre>').appendTo('body');
+					}
+					reader.readAsText(file);
+				} else if(/image\/\w+/.test(file.type)) {
+					reader.onload = function() {
+						$('<img src="' + this.result + '"/>').appendTo('body');
+					}
+					reader.readAsDataURL(file);
+				}
+			}
+		}
 	</script>
   </body>
 </html>
