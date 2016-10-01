@@ -1,0 +1,11 @@
+.text
+{
+	background: rgba(0,0,0,0.6);
+	color: #ccc;
+	padding-bottom:5%;
+	padding-left:5%;
+	padding-right:5%;
+	padding-top:5%;
+	line-height:180%;
+	font-size:17px;
+}
