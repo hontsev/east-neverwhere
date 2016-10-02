@@ -1,6 +1,6 @@
 {
 	"groups":[{
-			"keys":"description_json,background_jpg,base_png,bailianyiqun_png,baishuangmawei_png,baisimuji_png,heichangzhi_png,hongshuangmawei_png,hualihongqun_png,lanyuyi_png,lianhuafaxing_png,shanzi_png",
+			"keys":"description_json,background_jpg,base_png,bailianyiqun_png,baishuangmawei_png,baisimuji_png,heichangzhi_png,hongshuangmawei_png,hualihongqun_png,lanyuyi_png,lianhuafaxing_png,shanzi_png,fenshuangmawei_png,heibaisi_png,hongbaichangqun_png,hongbaiku_png,hualibaiyi_png,hualiziyi_png,lanlianyiqun_png,lianhuataozhuang_png,qinglianyiqun_png,tianyifaxing_png,xiaohongchui_png,zongduanfa_png,zonghongduanfa_png,zuiweixiao_png",
 			"name":"preload"
 		}],
 	"resources":[
@@ -63,6 +63,76 @@
 			"name":"shanzi_png",
 			"type":"image",
 			"url":"assets/shanzi.png"
+		},
+		{
+			"name":"fenshuangmawei_png",
+			"type":"image",
+			"url":"assets/fenshuangmawei.png"
+		},
+		{
+			"name":"heibaisi_png",
+			"type":"image",
+			"url":"assets/heibaisi.png"
+		},
+		{
+			"name":"hongbaichangqun_png",
+			"type":"image",
+			"url":"assets/hongbaichangqun.png"
+		},
+		{
+			"name":"hongbaiku_png",
+			"type":"image",
+			"url":"assets/hongbaiku.png"
+		},
+		{
+			"name":"hualibaiyi_png",
+			"type":"image",
+			"url":"assets/hualibaiyi.png"
+		},
+		{
+			"name":"hualiziyi_png",
+			"type":"image",
+			"url":"assets/hualiziyi.png"
+		},
+		{
+			"name":"lanlianyiqun_png",
+			"type":"image",
+			"url":"assets/lanlianyiqun.png"
+		},
+		{
+			"name":"lianhuataozhuang_png",
+			"type":"image",
+			"url":"assets/lianhuataozhuang.png"
+		},
+		{
+			"name":"qinglianyiqun_png",
+			"type":"image",
+			"url":"assets/qinglianyiqun.png"
+		},
+		{
+			"name":"tianyifaxing_png",
+			"type":"image",
+			"url":"assets/tianyifaxing.png"
+		},
+		{
+			"name":"xiaohongchui_png",
+			"type":"image",
+			"url":"assets/xiaohongchui.png"
+		},
+		{
+			"name":"zongduanfa_png",
+			"type":"image",
+			"url":"assets/zongduanfa.png"
+		},
+		{
+			"name":"zonghongduanfa_png",
+			"type":"image",
+			"url":"assets/zonghongduanfa.png"
+		},
+		{
+			"name":"zuiweixiao_png",
+			"type":"image",
+			"url":"assets/zuiweixiao.png"
 		}
 	]
 }
