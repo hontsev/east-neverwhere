@@ -38,7 +38,7 @@
 						<!-- <li class="nav-header">List header</li> -->
 						<li><a href="javascript:to(1)">去掉换行</a></li>
 						<li><a href="javascript:to(2)">逐句换行</a></li>
-						<li><a href="javascript:to(3)">暂无</a></li>
+						<li><a href="javascript:to(3)">逐句换行并英译中</a></li>
 					</ul>
 				</div>
 			</div>
@@ -75,6 +75,20 @@
 		
 		</div>
 		<div id="area3">
+		
+				<div class="col-md-12">
+			<h4 class="form-signin-heading" style="color:#fff">
+				<b>逐句换行，对结果英译中。借了个网上的谷歌api</b> 
+				<a id="btn3" class="btn btn-primary" href="javascript:doit3()">=></a>
+			</h4>
+		</div>
+			<div class="col-md-6">
+				<textarea id="ori3" class="form-control" rows="12"></textarea>
+			</div>
+			<div class="col-md-6">
+				<textarea id="res3" class="form-control" rows="12"></textarea>
+			</div>
+		
 		</div>
 				
 		</div>
@@ -111,6 +125,50 @@
 			
 			text=text.replace(/。/ig,"。\n");
 			$("#res2").text(text);
+		}
+		
+		var index=0;
+		var sens;
+		function doit3(){		
+			text=$("#ori3").val();
+			text=text.replace(/\n/ig," ");
+			sens=text.split(". ");
+			//console.log(sens);
+			index=0;
+			res="";
+			api="http://www.liuxiatool.com/t.php?sl=en&tl=zh-CN&q=";
+			$("#res3").text("");
+			
+			$("#btn3").attr("href","#");
+			$("#btn3").text("正在翻译...(1/"+sens.length+")");
+			$("#btn3").toggleClass("btn-primary");
+			$("#btn3").toggleClass("btn-success");
+			
+			translate();
+		}
+		
+		function translate(){
+			$.ajax({
+				url:encodeURI(api+sens[index]+"."),
+				success:function(res){
+					t=res.split("Translate: <span>\"")[1];
+					t=t.split("\"")[0];
+					text=$("#res3").val();
+					text+=t+"\n";
+					$("#res3").text(text);
+					$("#res3").scrollTop($("#res3").prop("scrollHeight"));
+					if(index<sens.length-1){
+						index++;
+						$("#btn3").text("正在翻译...("+(index+1)+"/"+sens.length+")");
+						translate();
+					}else{
+						$("#btn3").attr("href","javascript:doit3()");
+						$("#btn3").text("=>");
+						$("#btn3").toggleClass("btn-primary");
+						$("#btn3").toggleClass("btn-success");
+					}
+				}
+			});
 		}
 	</script>
   </body>
