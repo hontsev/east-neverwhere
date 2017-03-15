@@ -68,6 +68,7 @@ $(function(){
 		add1s();
 		$.ajax({
 			type:"POST",
+			dataType: 'JSONP',
 			url:"http://1s.mfxh8.com/love.php",
 			data:"id="+id,
 			cache:false,
