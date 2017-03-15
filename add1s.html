@@ -65,16 +65,14 @@ $(function(){
 	$("#add-one-second").click(function(){
 		var love = $("#info");
 		var id = love.attr("rel");
-		add1s();
 		$.ajax({
 			type:"POST",
-			dataType: 'JSONP',
 			url:"http://1s.mfxh8.com/love.php",
 			data:"id="+id,
 			cache:false,
 			success:function(data){
 				love.html(data);
-				show1s();
+				add1s();
 			}
 		});
 		return false;
