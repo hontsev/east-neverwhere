@@ -7,6 +7,7 @@ $(window).load(function(){
         '    <ul class="dropdown-menu">'+
         '       <li><a href="game.html">游戏测试</a></li>'+
 		'	   <li><a href="/shaohuamoniqi/index.html">韶华模拟器</a></li>'+
+		'	   <li><a href="/ha2048/index.html">ha2048</a></li>'+
         '       <li class="divider"></li>'+
 		'	   <li><a href="http://121.42.187.116:81/client/enter.html">数据查询</a></li>'+
 		'	   <li><a href="http://121.42.187.116:81/client/searchitem.html">备忘录</a></li>'+
