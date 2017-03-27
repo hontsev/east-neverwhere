@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>乌有乡 - East Neverwhere</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/sixsquarestyle.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body style="background-image:url(image/bg.jpg);background-repeat:no-repeat; background-attachment:fixed;background-size:cover">
+  <nav class="navbar navbar-inverse" role="navigation">
+   <div class="navbar-header">
+      <a class="navbar-brand" href="http://eastneverwhere.party/">乌有乡 - East Neverwhere</a>
+   </div>
+   <div>
+      <ul class="nav navbar-nav" id='menubar'></ul>
+   </div>
+</nav>
+      <div class="container">
+	  <div class="col-md-12" style="padding-bottom:60px">
+			<h2 class="form-signin-heading" style="color:#fff"><b>小工具</b></h2>
+		</div>		
+	  <div class="col-md-12">
+	  		<div class="col-md-2" data-spy="affix" data-offset-top="0">
+			<div class="row">
+				<div class="span6">
+					<ul class="nav nav-list" style="border-left:1px solid #ccc">
+						<!-- <li class="nav-header">List header</li> -->
+						<li><a href="javascript:to(1)">数学公式mml转latex</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-10 text pull-right" >
+		<div id="area1">
+		<div class="col-md-12">
+			<h4 class="form-signin-heading" style="color:#fff">
+				<b>mathML(.mml) => latex</b> 
+				<button class="btn btn-primary" onclick="doit()">=></button>
+			</h4>
+		</div>
+		
+			<div class="col-md-6">
+				<textarea id="ori" class="form-control" rows="12"></textarea>
+			</div>
+			<div class="col-md-6">
+				<textarea id="res" class="form-control" rows="12"></textarea>
+			</div>
+		</div>
+		
+				
+		</div>
+		
+	  </div>
+	  
+
+    </div> <!-- /container -->
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/menubar.js"></script>
+	<script>
+		function to(num){
+			maxnum=3;
+			for(i=1;i<=maxnum;i++){
+				if(i==num)$("#area"+i).show();
+				else $("#area"+i).hide();
+			}
+		}
+		to(1);
+		
+		function doit(){
+			text=$("#ori").val();
+			translate(text);
+		}
+		
+		function getXml(){
+			url="http://neverwhere.esy.es/xsltml_2.1.2/result.xml";
+			$.ajax({
+				url:url,
+				dataType: 'xml',
+				type:"get",
+				success:function(res){
+					console.log(res);
+					$("#res").text(res);
+				}
+			});
+		}
+		
+	  
+		
+		function translate(mml){
+			$.ajax({
+				url:encodeURI("http://neverwhere.esy.es/xsltml_2.1.2/writexml.php?mathml="+mml),
+				type:"get",
+				success:function(res){
+					getXml();
+				}
+			});
+		}
+	</script>
+  </body>
+</html>
