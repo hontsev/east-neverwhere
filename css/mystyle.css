@@ -9,3 +9,11 @@
 	line-height:180%;
 	font-size:17px;
 }
+
+body{
+	background-color:#000;
+	background-image:url(image/bg.jpg);
+	background-repeat:no-repeat; 
+	background-attachment:fixed;
+	background-size:cover;
+}
