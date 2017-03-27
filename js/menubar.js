@@ -9,8 +9,6 @@ $(window).load(function(){
 		'	   <li><a href="/shaohuamoniqi/index.html">韶华模拟器</a></li>'+
 		'	   <li><a href="/ha2048/index.html">ha2048</a></li>'+
         '       <li class="divider"></li>'+
-		'	   <li><a href="http://121.42.187.116:81/client/enter.html">数据查询</a></li>'+
-		'	   <li><a href="http://121.42.187.116:81/client/searchitem.html">备忘录</a></li>'+
         '    </ul>'+
         ' </li>';
 		
@@ -21,6 +19,7 @@ $(window).load(function(){
         '    <ul class="dropdown-menu">'+
         '       <li><a href="filetest.html">文件操作测试</a></li>'+
         '       <li><a href="formatchange.html">格式小工具</a></li>'+
+		'		<li><a href="http://neverwhere.esy.es/xsltml_2.1.2/mml2latex.html">mml转latex</a></li>'+
         '    </ul>'+
         ' </li>';
 		
