@@ -50,9 +50,20 @@
 	  
 
     </div> <!-- /container -->
-    <script src="../js/jquery-1.12.0.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-	<script src="../js/menubar.js"></script>
-	
+    <script src="/js/jquery-1.12.0.min.js"></script>
+	<script src="/js/jquery.goup.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+	<script src="/js/menubar.js"></script>
+	<script>
+	 $(document).ready(function () {
+ 
+            $.goup({
+                trigger: 100,
+                bottomOffset: 150,
+                locationOffset: 100,
+            });
+ 
+        });
+	</script>
   </body>
 </html>
