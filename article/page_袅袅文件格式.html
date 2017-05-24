@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
@@ -28,22 +28,11 @@
 </nav>
       <div class="container">
 	  <div class="col-md-12" style="padding-bottom:60px">
-			<h2 class="form-signin-heading" style="color:#fff"><b>文章 - 目录</b></h2>
+			<h2 class="form-signin-heading" style="color:#fff"><b>袅袅文件格式</b></h2>
 		</div>		
 	  <div class="col-md-12">
-	  	<div class="col-md-12 index pull-left" >
-			<div class="row">
-				<div class="span6">
-					<ul class="nav nav-list" style="border-left:1px solid #ccc">
-						<!-- <li class="nav-header">List header</li> -->
-						<!--
-						<li><a style="color:#000;font-size:19px" href="#">放肆1<span class="pull-right">2015-12-13</span> </a></li>  
-						-->
-						{index}
-					</ul>
-				</div>
-			</div>
-			
+	  	<div class="col-md-12 text pull-right" >
+			<p>袅袅文件格式</p><p></p><p>第一行：10个参数</p><p>&emsp;曲速（20~240&nbsp;一位小数）</p><p>&emsp;节拍（整数）</p><p>&emsp;节拍（整数）</p><p>&emsp;小节总数（4~1000）</p><p>&emsp;未知（19）</p><p>&emsp;未知（0）</p><p>&emsp;未知（0）</p><p>&emsp;未知（0）</p><p>&emsp;未知（0）</p><p>&emsp;未知（0）</p><p>第二行：1个参数</p><p>&emsp;音节个数（不能超过小节总数）</p><p>第三行开始，每一行是一个音节：14个参数</p><p>&emsp;显示的字符（汉字或者拼音）</p><p>&emsp;拼音字母串</p><p>&emsp;起始位置（从0开始计数）</p><p>&emsp;长度</p><p>&emsp;音高（自上而下，从0开始计数）</p><p>&emsp;发音清晰度（0~100）</p><p>&emsp;发音急促度</p><p>&emsp;滑音起始</p><p>&emsp;颤音参数-时长</p><p>&emsp;颤音参数-幅度</p><p>&emsp;颤音参数-速率</p><p>&emsp;音量参数（以逗号分隔，100个，每个的范围是0~100，表示的范围是音量从0%到200%）</p><p>&emsp;音高弯曲参数（以逗号分隔，100个，每个的范围是0~100，表示的范围是音高弯曲从-100%到100%）</p><p>&emsp;弯曲灵敏度遍历值（取值0~11，数字为k表示的灵敏度为k+1个半音）</p>
 		</div>
 		
 	  </div>
