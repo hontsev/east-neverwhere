@@ -32,7 +32,60 @@
 		</div>		
 	  <div class="col-md-12">
 	  	<div class="col-md-12 text pull-right" >
-			<p>一个小说自动生成系统及随想</p><p></p><p>文章自动生成的方式：</p><p>1&nbsp;层次生成法，按照世界模型，根据语用数据库构建内容描述</p><p>&emsp;1.1&nbsp;框架结构</p><p></p><p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;知识网络&emsp;&emsp;&emsp;&emsp;语用数据库&emsp;&emsp;&emsp;&emsp;&emsp;文笔润色规则&emsp;&emsp;&emsp;&emsp;&emsp;</p><p>&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;↓&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;↓&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;↓</p><p>&emsp;&emsp;初始世界参数&nbsp;——————————————>&nbsp;世界模型&nbsp;——————————————>&nbsp;内容描述结果&nbsp;——————————————>&nbsp;生成结果</p><p></p><p>&emsp;1.2&nbsp;初始世界参数</p><p>&emsp;&emsp;初始世界参数用来描述在文章中出现的各命名实体的名称、属性值等信息，必须依照相应的知识网络的内容规则来填写。</p><p>&emsp;&emsp;初始世界参数一般由生成前人工给定，也可以半人工给定，也可以由系统随机生成。</p><p>&emsp;1.3&nbsp;知识网络</p><p>&emsp;&emsp;1.3.1&nbsp;知识网络概述</p><p>&emsp;&emsp;&emsp;知识网络，是一个用来描述小说世界客观规律知识的规范化数据集。</p><p>&emsp;&emsp;&emsp;区别于传统的语义网络、知识图谱等，知识网络主要强调各客观事物的互动关系，以之来支持符合逻辑的事物互相影响事件的发生。</p><p>&emsp;&emsp;&emsp;知识网络的规则要更加简单，并且要求准确。</p><p>&emsp;&emsp;&emsp;知识网络希望用较简单的网络结构来实现灵活、复杂的逻辑。</p><p>&emsp;&emsp;1.3.2&nbsp;知识网络的分类</p><p>&emsp;&emsp;&emsp;知识网络分为：静态知识网络、动态知识网络。</p><p>&emsp;&emsp;1.3.3&nbsp;静态知识网络</p><p>&emsp;&emsp;&emsp;1.3.3.1&nbsp;构成</p><p>&emsp;&emsp;&emsp;&emsp;静态知识网络由以下几部分构成：</p><p>&emsp;&emsp;&emsp;&emsp;实体：</p><p>&emsp;&emsp;&emsp;&emsp;&emsp;一个可拆分的客观事物单元，并且是句子中的主语或者宾语。</p><p>&emsp;&emsp;&emsp;&emsp;&emsp;实体可以附有若干属性</p><p>&emsp;&emsp;&emsp;&emsp;&emsp;实体可以被命名，以与其他带有完全相同属性的实体区分开</p><p>&emsp;&emsp;&emsp;&emsp;&emsp;实体的名字全局唯一</p><p>&emsp;&emsp;&emsp;&emsp;属性：</p><p>&emsp;&emsp;&emsp;&emsp;&emsp;用来刻画其所附属的实体的某一方面的一种抽象而来的东西。</p><p>&emsp;&emsp;&emsp;&emsp;动作：</p><p>&emsp;&emsp;&emsp;&emsp;&emsp;动作是属性之间的转化规则。</p><p>&emsp;&emsp;1.3.4&nbsp;动态知识网络</p><p>&emsp;&emsp;&emsp;1.3.4.1&nbsp;构成</p><p>&emsp;&emsp;&emsp;&emsp;动态知识网络与静态知识网络的区别是，以事件代替了动作。</p><p></p><p>&emsp;1.4&nbsp;世界模型</p><p>&emsp;&emsp;1.4.1&nbsp;生成方式</p><p>&emsp;&emsp;&emsp;1.4.1.1&nbsp;基于动态知识网络动力学的世界构建</p><p></p><p>&emsp;&emsp;&emsp;1.4.1.2&nbsp;基于静态知识网络的层次世界构建</p><p>&emsp;1.5&nbsp;语用数据库</p><p>&emsp;1.6&nbsp;内容描述</p><p>&emsp;1.7&nbsp;文笔润色</p><p></p><p>2&nbsp;随着意识流而生成文字</p><p>&emsp;2.1&nbsp;框架结构</p><p></p><p>&emsp;&emsp;……&emsp;———>&nbsp;意识状态一&nbsp;———————意识流运算———————>&nbsp;意识状态二&nbsp;———>&nbsp;&nbsp;&nbsp;……</p><p>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;↓&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓</p><p>&emsp;&emsp;……&emsp;+&emsp;文章部分一&emsp;&emsp;&emsp;&emsp;+&emsp;&emsp;&emsp;&nbsp;&nbsp;文章部分二&nbsp;&nbsp;+&emsp;&emsp;……&emsp;&emsp;=&emsp;生成结果</p><p></p>
+			一个小说自动生成系统及随想
+
+文章自动生成的方式：
+1 层次生成法，按照世界模型，根据语用数据库构建内容描述
+	1.1 框架结构
+
+						知识网络				语用数据库					文笔润色规则					
+		    				↓						↓							↓
+		初始世界参数 ——————————————> 世界模型 ——————————————> 内容描述结果 ——————————————> 生成结果
+
+	1.2 初始世界参数
+		初始世界参数用来描述在文章中出现的各命名实体的名称、属性值等信息，必须依照相应的知识网络的内容规则来填写。
+		初始世界参数一般由生成前人工给定，也可以半人工给定，也可以由系统随机生成。
+	1.3 知识网络
+		1.3.1 知识网络概述
+			知识网络，是一个用来描述小说世界客观规律知识的规范化数据集。
+			区别于传统的语义网络、知识图谱等，知识网络主要强调各客观事物的互动关系，以之来支持符合逻辑的事物互相影响事件的发生。
+			知识网络的规则要更加简单，并且要求准确。
+			知识网络希望用较简单的网络结构来实现灵活、复杂的逻辑。
+		1.3.2 知识网络的分类
+			知识网络分为：静态知识网络、动态知识网络。
+		1.3.3 静态知识网络
+			1.3.3.1 构成
+				静态知识网络由以下几部分构成：
+				实体：
+					一个可拆分的客观事物单元，并且是句子中的主语或者宾语。
+					实体可以附有若干属性
+					实体可以被命名，以与其他带有完全相同属性的实体区分开
+					实体的名字全局唯一
+				属性：
+					用来刻画其所附属的实体的某一方面的一种抽象而来的东西。
+				动作：
+					动作是属性之间的转化规则。
+		1.3.4 动态知识网络
+			1.3.4.1 构成
+				动态知识网络与静态知识网络的区别是，以事件代替了动作。
+
+	1.4 世界模型
+		1.4.1 生成方式
+			1.4.1.1 基于动态知识网络动力学的世界构建
+
+			1.4.1.2 基于静态知识网络的层次世界构建
+	1.5 语用数据库
+	1.6 内容描述
+	1.7 文笔润色
+
+2 随着意识流而生成文字
+	2.1 框架结构
+
+		……	———> 意识状态一 ———————意识流运算———————> 意识状态二 ———>   ……
+					 ↓								      ↓
+		……	+	文章部分一				+			  文章部分二  +		……		=	生成结果
+
+<p>一个小说自动生成系统及随想</p><p></p><p>文章自动生成的方式：</p><p>1&nbsp;层次生成法，按照世界模型，根据语用数据库构建内容描述</p><p>&emsp;1.1&nbsp;框架结构</p><p></p><p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;知识网络&emsp;&emsp;&emsp;&emsp;语用数据库&emsp;&emsp;&emsp;&emsp;&emsp;文笔润色规则&emsp;&emsp;&emsp;&emsp;&emsp;</p><p>&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;↓&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;↓&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;↓</p><p>&emsp;&emsp;初始世界参数&nbsp;——————————————>&nbsp;世界模型&nbsp;——————————————>&nbsp;内容描述结果&nbsp;——————————————>&nbsp;生成结果</p><p></p><p>&emsp;1.2&nbsp;初始世界参数</p><p>&emsp;&emsp;初始世界参数用来描述在文章中出现的各命名实体的名称、属性值等信息，必须依照相应的知识网络的内容规则来填写。</p><p>&emsp;&emsp;初始世界参数一般由生成前人工给定，也可以半人工给定，也可以由系统随机生成。</p><p>&emsp;1.3&nbsp;知识网络</p><p>&emsp;&emsp;1.3.1&nbsp;知识网络概述</p><p>&emsp;&emsp;&emsp;知识网络，是一个用来描述小说世界客观规律知识的规范化数据集。</p><p>&emsp;&emsp;&emsp;区别于传统的语义网络、知识图谱等，知识网络主要强调各客观事物的互动关系，以之来支持符合逻辑的事物互相影响事件的发生。</p><p>&emsp;&emsp;&emsp;知识网络的规则要更加简单，并且要求准确。</p><p>&emsp;&emsp;&emsp;知识网络希望用较简单的网络结构来实现灵活、复杂的逻辑。</p><p>&emsp;&emsp;1.3.2&nbsp;知识网络的分类</p><p>&emsp;&emsp;&emsp;知识网络分为：静态知识网络、动态知识网络。</p><p>&emsp;&emsp;1.3.3&nbsp;静态知识网络</p><p>&emsp;&emsp;&emsp;1.3.3.1&nbsp;构成</p><p>&emsp;&emsp;&emsp;&emsp;静态知识网络由以下几部分构成：</p><p>&emsp;&emsp;&emsp;&emsp;实体：</p><p>&emsp;&emsp;&emsp;&emsp;&emsp;一个可拆分的客观事物单元，并且是句子中的主语或者宾语。</p><p>&emsp;&emsp;&emsp;&emsp;&emsp;实体可以附有若干属性</p><p>&emsp;&emsp;&emsp;&emsp;&emsp;实体可以被命名，以与其他带有完全相同属性的实体区分开</p><p>&emsp;&emsp;&emsp;&emsp;&emsp;实体的名字全局唯一</p><p>&emsp;&emsp;&emsp;&emsp;属性：</p><p>&emsp;&emsp;&emsp;&emsp;&emsp;用来刻画其所附属的实体的某一方面的一种抽象而来的东西。</p><p>&emsp;&emsp;&emsp;&emsp;动作：</p><p>&emsp;&emsp;&emsp;&emsp;&emsp;动作是属性之间的转化规则。</p><p>&emsp;&emsp;1.3.4&nbsp;动态知识网络</p><p>&emsp;&emsp;&emsp;1.3.4.1&nbsp;构成</p><p>&emsp;&emsp;&emsp;&emsp;动态知识网络与静态知识网络的区别是，以事件代替了动作。</p><p></p><p>&emsp;1.4&nbsp;世界模型</p><p>&emsp;&emsp;1.4.1&nbsp;生成方式</p><p>&emsp;&emsp;&emsp;1.4.1.1&nbsp;基于动态知识网络动力学的世界构建</p><p></p><p>&emsp;&emsp;&emsp;1.4.1.2&nbsp;基于静态知识网络的层次世界构建</p><p>&emsp;1.5&nbsp;语用数据库</p><p>&emsp;1.6&nbsp;内容描述</p><p>&emsp;1.7&nbsp;文笔润色</p><p></p><p>2&nbsp;随着意识流而生成文字</p><p>&emsp;2.1&nbsp;框架结构</p><p></p><p>&emsp;&emsp;……&emsp;———>&nbsp;意识状态一&nbsp;———————意识流运算———————>&nbsp;意识状态二&nbsp;———>&nbsp;&nbsp;&nbsp;……</p><p>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;↓&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓</p><p>&emsp;&emsp;……&emsp;+&emsp;文章部分一&emsp;&emsp;&emsp;&emsp;+&emsp;&emsp;&emsp;&nbsp;&nbsp;文章部分二&nbsp;&nbsp;+&emsp;&emsp;……&emsp;&emsp;=&emsp;生成结果</p><p></p><p></p>
 		</div>
 		
 	  </div>
