@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>乌有乡 - East Neverwhere</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/sixsquarestyle.css" rel="stylesheet">
+	<link href="../css/mystyle.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body style="background-color:#000;background-image:url(../image/bg.jpg);background-repeat:no-repeat; background-attachment:fixed;background-size:cover">
+  <nav class="navbar navbar-inverse" role="navigation">
+   <div class="navbar-header">
+      <a class="navbar-brand" href="/">乌有乡 - East Neverwhere</a>
+   </div>
+   <div>
+      <ul class="nav navbar-nav" id='menubar'></ul>
+   </div>
+</nav>
+      <div class="container">
+	  <div class="col-md-12" style="padding-bottom:60px">
+			<h2 class="form-signin-heading" style="color:#fff"><b>文档20170708-101237</b></h2>
+		</div>		
+	  <div class="col-md-12">
+	  	<div class="col-md-12 text pull-right" >
+			<p>今天开始虚拟人形开发日志</p><p>&nbsp;</p><p>最终目标是完成虚拟人形整个健全人格的设计实现。</p><p>早期目标是实现纯文本输入，多接口输出。</p><p>中期目标是，通过可视化的3d或2d人物形象+模拟语音，在网络上进行直播。并且与直播观众可以互动。</p><p>为了早期目标应当做的事情：</p><p>1&nbsp;完善一个意识思维核心，将几条本能性原则构思清楚，实现</p><p>2&nbsp;完善配套的平台建设，包括api接口的实现以及设计系统内部交互用的语言（以便于程序解耦）</p><p>3&nbsp;通过语言测试，构建自动训练机构，避免长期重复劳动</p><p>&nbsp;</p><p>为了完成中间目标：</p><p>1&nbsp;完善语音合成系统，最好能够从零开始按照人体发声规律来纯粹合成声音，以便于自定义调整。</p><p>2&nbsp;实验一套合成的可动的2d或3d角色形象。</p><p>3&nbsp;调查直播平台接口api等等，开发连通程序</p><p>&nbsp;</p><p>&nbsp;</p><p>关于思维核心的建立：</p><p>应当能够实现人类的几个主要的认知功能。从聊天的形式上来看，人应该具有基本的上下文回忆认知，能够知道聊天者提及的是上文中哪些事物的指代，从而能够将聊天的多句话视作一个关联的整体来看待。其次，人应该具有基本的关联想象推理能力，能够通过聊天时给出的不够明确直观的意思中，通过几层关联联想，了解到对方的真正意图是什么，然后才能进行反馈。其次，人在聊天时具有话题选定的优先级考虑，在权衡了对方的意图、自我的主观想法、当前情景的需求之后，规划出应当如何作答。对于规划，人应当能够在头脑内部预先对于外界事物进行预演，以此构建出远远高于条件反射水平的对于外界的映射。</p><p>这个的思路不是很清晰，目前暂不考虑带有语境预演的智能核心。</p>
+		</div>
+		
+	  </div>
+	  
+
+    </div> <!-- /container -->
+    <script src="/js/jquery-1.12.0.min.js"></script>
+	<script src="/js/jquery.goup.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+	<script src="/js/menubar.js"></script>
+	<script>
+	 $(document).ready(function () {
+ 
+            $.goup({
+                trigger: 100,
+                bottomOffset: 150,
+                locationOffset: 100,
+            });
+ 
+        });
+	</script>
+	
+  </body>
+</html>

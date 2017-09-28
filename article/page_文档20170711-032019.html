@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>乌有乡 - East Neverwhere</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/sixsquarestyle.css" rel="stylesheet">
+	<link href="../css/mystyle.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body style="background-color:#000;background-image:url(../image/bg.jpg);background-repeat:no-repeat; background-attachment:fixed;background-size:cover">
+  <nav class="navbar navbar-inverse" role="navigation">
+   <div class="navbar-header">
+      <a class="navbar-brand" href="/">乌有乡 - East Neverwhere</a>
+   </div>
+   <div>
+      <ul class="nav navbar-nav" id='menubar'></ul>
+   </div>
+</nav>
+      <div class="container">
+	  <div class="col-md-12" style="padding-bottom:60px">
+			<h2 class="form-signin-heading" style="color:#fff"><b>文档20170711-032019</b></h2>
+		</div>		
+	  <div class="col-md-12">
+	  	<div class="col-md-12 text pull-right" >
+			<p>虚拟人形开发日志</p><p>&nbsp;</p><p>构建一个拟人的智能，首先还是要构建他行动的目标。根据之前的假设，智能体需要两个目标，一个是好奇心，也就是令其对于新鲜的条件反射关系的获得有一定的积极性。另一个是欲望，也就是令其在对外界作出反应的时候，要符合某种先验的属性值的最优解。</p><p>这两个目标的作用是，好奇心保证了其对于新的知识保持积极性，对于旧的已有知识则不再那么关心。这使得智能体能够对于外界环境的变化高度敏感，不断地改变自己的反应以适应环境。第二个目标，欲望保证了其行为逻辑的前后一致性，不至于为了盲目追求适应新的环境而导致毫无沉淀，导致一切获得到的知识都很快被抛弃遗忘。</p><p>&nbsp;</p><p>为智能体设置先验目标的一个最基本要求，就是这些目标应当落到实处，让智能体在程序设计的层面上能够运用这些目标。而我上述这两种目标都是编程可行的，并且通过相关连接的权值计算来实现。</p>
+		</div>
+		
+	  </div>
+	  
+
+    </div> <!-- /container -->
+    <script src="/js/jquery-1.12.0.min.js"></script>
+	<script src="/js/jquery.goup.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+	<script src="/js/menubar.js"></script>
+	<script>
+	 $(document).ready(function () {
+ 
+            $.goup({
+                trigger: 100,
+                bottomOffset: 150,
+                locationOffset: 100,
+            });
+ 
+        });
+	</script>
+	
+  </body>
+</html>
