@@ -110,6 +110,16 @@
 		}
 		to(1);
 		
+		function filter(text){
+			text=text.replace(/-\n/ig,"\n");
+			text=text.replace(/\n/ig," ");
+			text=text.replace(/et al\./ig,"et al \n");
+			text=text.replace(/\. /ig,". \n");
+			text=text.replace(/。/ig,"。\n");
+			text=text.replace(/\\/ig,"/");
+			return text;
+		}
+		
 		function doit(){
 			text=$("#ori").val().replace(/\n/ig," ");
 			// console.log(text);
@@ -118,12 +128,13 @@
 		
 		function doit2(){
 			text=$("#ori2").val();
-			text=text.replace(/\n/ig," ");
-			text=text.replace(/\. /ig,".\n");
+			text=filter(text);
+			
+			
 			//var reg=new RegExp("\.( )","gmi");
 			//text=text.replace(reg,"$1\n");
 			
-			text=text.replace(/。/ig,"。\n");
+			
 			$("#res2").text(text);
 		}
 		
@@ -131,7 +142,8 @@
 		var sens;
 		function doit3(){		
 			text=$("#ori3").val();
-			text=text.replace(/\n/ig," ");
+			text=filter(text);
+			//text=text.replace(/\n/ig," ");
 			sens=text.split(". ");
 			//console.log(sens);
 			index=0;
