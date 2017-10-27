@@ -112,10 +112,12 @@
 		
 		function filter(text){
 			text=text.replace(/-\n/ig,"\n");
-			text=text.replace(/\n/ig," ");
-			text=text.replace(/et al\./ig,"et al \n");
-			text=text.replace(/\. /ig,". \n");
+			text=text.replace(/et al\./ig,"et al ");
+			text=text.replace(/\n/ig," ");		
+			
+			text=text.replace(/[^A-Z]\. /ig,". \n");
 			text=text.replace(/。/ig,"。\n");
+			
 			text=text.replace(/\\/ig,"/");
 			return text;
 		}
