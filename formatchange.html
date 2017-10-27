@@ -115,7 +115,7 @@
 			text=text.replace(/et al\./ig,"et al ");
 			text=text.replace(/\n/ig," ");		
 			
-			text=text.replace(/([^0-9A-Z])\. /g,"$1 \n");
+			text=text.replace(/( [^0-9A-Z])\. /g,"$1.\n");
 			text=text.replace(/。/ig,"。\n");
 			
 			text=text.replace(/\\/ig,"/");
