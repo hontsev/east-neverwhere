@@ -166,7 +166,25 @@
 				url:encodeURI(api+sens[index]+"."),
 				success:function(res){
 					t=res.split("Translate: <span>\"")[1];
-					t=t.split("\"")[0];
+					if(typeof(t)=="string")t=t.split("\"")[0];
+					else t=sens[index];
+					text=$("#res3").val();
+					text+=t+"\n";
+					$("#res3").text(text);
+					$("#res3").scrollTop($("#res3").prop("scrollHeight"));
+					if(index<sens.length-1){
+						index++;
+						$("#btn3").text("正在翻译...("+(index+1)+"/"+sens.length+")");
+						translate();
+					}else{
+						$("#btn3").attr("href","javascript:doit3()");
+						$("#btn3").text("=>");
+						$("#btn3").toggleClass("btn-primary");
+						$("#btn3").toggleClass("btn-success");
+					}
+				},
+				error:function(res){
+					t=sens[index];
 					text=$("#res3").val();
 					text+=t+"\n";
 					$("#res3").text(text);
