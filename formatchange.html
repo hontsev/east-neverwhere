@@ -111,13 +111,15 @@
 		to(1);
 		
 		function filter(text){
+		
+		
 			text=text.replace(/-\n/ig,"\n");
 			text=text.replace(/et al\./ig,"et al ");
-			text=text.replace(/\n/ig," ");		
+			text=text.replace(/e\\g\./ig,"e.g ");
+			text=text.replace(/([^\.])\n/ig,"$1 ");	
 			
-			text=text.replace(/( [^0-9A-Z])\. /g,"$1.\n");
 			text=text.replace(/。/ig,"。\n");
-			
+			text=text.replace(/([^0-9A-Z])\. /g,"$1\. \n");
 			text=text.replace(/\\/ig,"/");
 			return text;
 		}
@@ -131,7 +133,7 @@
 		function doit2(){
 			text=$("#ori2").val();
 			text=filter(text);
-			
+			//sens=text.replace(". ",".\n");
 			
 			//var reg=new RegExp("\.( )","gmi");
 			//text=text.replace(reg,"$1\n");
@@ -139,7 +141,6 @@
 			
 			$("#res2").text(text);
 		}
-		
 		var index=0;
 		var sens;
 		function doit3(){		
