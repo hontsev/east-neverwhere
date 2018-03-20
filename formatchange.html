@@ -39,6 +39,7 @@
 						<li><a href="javascript:to(1)">去掉换行</a></li>
 						<li><a href="javascript:to(2)">逐句换行</a></li>
 						<li><a href="javascript:to(3)">逐句换行并英译中</a></li>
+						<li><a href="javascript:to(4)">逐行英译中</a></li>
 					</ul>
 				</div>
 			</div>
@@ -90,6 +91,22 @@
 			</div>
 		
 		</div>
+		<div id="area4">
+		
+				<div class="col-md-12">
+			<h4 class="form-signin-heading" style="color:#fff">
+				<b>对每一行英译中。借谷歌api</b> 
+				<a id="btn4" class="btn btn-primary" href="javascript:doit4()">=></a>
+			</h4>
+		</div>
+			<div class="col-md-6">
+				<textarea id="ori4" class="form-control" rows="12"></textarea>
+			</div>
+			<div class="col-md-6">
+				<textarea id="res4" class="form-control" rows="12"></textarea>
+			</div>
+		
+		</div>
 				
 		</div>
 		
@@ -101,8 +118,13 @@
     <script src="js/bootstrap.min.js"></script>
 	<script src="js/menubar.js"></script>
 	<script>
+	
+	String.prototype.replaceAll = function(s1,s2){ 
+return this.replace(new RegExp(s1,"gm"),s2); 
+}
+
 		function to(num){
-			maxnum=3;
+			maxnum=4;
 			for(i=1;i<=maxnum;i++){
 				if(i==num)$("#area"+i).show();
 				else $("#area"+i).hide();
@@ -113,19 +135,20 @@
 		function filter(text){
 		
 		
-			text=text.replace(/-\n/ig,"\n");
-			text=text.replace(/et al\./ig,"et al ");
-			text=text.replace(/e\\g\./ig,"e.g ");
-			text=text.replace(/([^\.])\n/ig,"$1 ");	
+			text=text.replaceAll(/-\n/ig,"\n");
+			text=text.replaceAll(/et al\./ig,"et al ");
+			text=text.replaceAll(/e\\g\./ig,"e.g ");
+			text=text.replaceAll(/([^\.])\n/ig,"$1 ");	
 			
-			text=text.replace(/。/ig,"。\n");
-			text=text.replace(/([^0-9A-Z])\. /g,"$1\. \n");
-			text=text.replace(/\\/ig,"/");
+			text=text.replaceAll(/。/ig,"。\n");
+			text=text.replaceAll(/([^0-9A-Z])\./g,"$1\. \n");
+			text=text.replaceAll(/\\/ig,"/");
+			text=text.replaceAll(/\//,"_");
 			return text;
 		}
 		
 		function doit(){
-			text=$("#ori").val().replace(/\n/ig," ");
+			text=$("#ori").val().replaceAll(/\n/ig," ");
 			// console.log(text);
 			$("#res").text(text);
 		}
@@ -153,52 +176,72 @@
 			res="";
 			api="http://neverwhere.esy.es/t.php?q=";
 			$("#res3").text("");
+			$("#res3").val("");
 			
 			$("#btn3").attr("href","#");
 			$("#btn3").text("正在翻译...(1/"+sens.length+")");
 			$("#btn3").toggleClass("btn-primary");
 			$("#btn3").toggleClass("btn-success");
 			
-			translate();
+			translate(3);
 		}
 		
-		function translate(){
+		function doit4(){		
+			text=$("#ori4").val();
+			//text=filter(text);
+			//text=text.replace(/\n/ig," ");
+			sens=text.split("\n");
+			console.log(sens);
+			index=0;
+			res="";
+			api="http://neverwhere.esy.es/t.php?q=";
+			$("#res4").text("");
+			$("#res4").val("");
+			$("#btn4").attr("href","#");
+			$("#btn4").text("正在翻译...(1/"+sens.length+")");
+			$("#btn4").toggleClass("btn-primary");
+			$("#btn4").toggleClass("btn-success");
+			
+			translate(4);
+		}
+		
+		function translate(div_index){
 			$.ajax({
 				url:encodeURI(api+sens[index]+"."),
 				success:function(res){
 					t=res.split("Translate: <span>\"")[1];
 					if(typeof(t)=="string")t=t.split("\"")[0];
 					else t=sens[index];
-					text=$("#res3").val();
-					text+=t+"\n";
-					$("#res3").text(text);
-					$("#res3").scrollTop($("#res3").prop("scrollHeight"));
+					text=$("#res"+div_index).val();
+					text+=t.replaceAll(/\\n/,"\r\n")+"\r\n";
+					$("#res"+div_index).val(text);
+					$("#res"+div_index).scrollTop($("#res"+div_index).prop("scrollHeight"));
 					if(index<sens.length-1){
 						index++;
-						$("#btn3").text("正在翻译...("+(index+1)+"/"+sens.length+")");
-						translate();
+						$("#btn"+div_index).text("正在翻译...("+(index+1)+"/"+sens.length+")");
+						translate(div_index);
 					}else{
-						$("#btn3").attr("href","javascript:doit3()");
-						$("#btn3").text("=>");
-						$("#btn3").toggleClass("btn-primary");
-						$("#btn3").toggleClass("btn-success");
+						$("#btn"+div_index).attr("href","javascript:doit"+div_index+"()");
+						$("#btn"+div_index).text("=>");
+						$("#btn"+div_index).toggleClass("btn-primary");
+						$("#btn"+div_index).toggleClass("btn-success");
 					}
 				},
 				error:function(res){
 					t=sens[index];
-					text=$("#res3").val();
-					text+=t+"\n";
-					$("#res3").text(text);
-					$("#res3").scrollTop($("#res3").prop("scrollHeight"));
+					text=$("#res"+div_index).val();
+					text+=t.replaceAll(/\\n/,"\r\n")+"\r\n";
+					$("#res"+div_index).val(text);
+					$("#res"+div_index).scrollTop($("#res"+div_index).prop("scrollHeight"));
 					if(index<sens.length-1){
 						index++;
-						$("#btn3").text("正在翻译...("+(index+1)+"/"+sens.length+")");
-						translate();
+						$("#btn"+div_index).text("正在翻译...("+(index+1)+"/"+sens.length+")");
+						translate(div_index);
 					}else{
-						$("#btn3").attr("href","javascript:doit3()");
-						$("#btn3").text("=>");
-						$("#btn3").toggleClass("btn-primary");
-						$("#btn3").toggleClass("btn-success");
+						$("#btn"+div_index).attr("href","javascript:doit"+div_index+"()");
+						$("#btn"+div_index).text("=>");
+						$("#btn"+div_index).toggleClass("btn-primary");
+						$("#btn"+div_index).toggleClass("btn-success");
 					}
 				}
 			});
