@@ -20,6 +20,7 @@ $(window).load(function(){
         '       <li><a href="/filetest.html">文件操作测试</a></li>'+
 		'       <li><a href="/mingan.html">敏感词过滤</a></li>'+
         '       <li><a href="/formatchange.html">格式小工具</a></li>'+
+		'		<li><a href="/idctest.html">身份证</a></li>'+
 		'		<li><a href="http://neverwhere.esy.es/xsltml_2.1.2/mml2latex.html">mml转latex</a></li>'+
         '    </ul>'+
         ' </li>';

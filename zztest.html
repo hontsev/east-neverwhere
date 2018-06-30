@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>乌有乡 - East Neverwhere</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/sixsquarestyle.css" rel="stylesheet">
+	
+	<link href="css/icheck-skins/square/_all.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body style="background-color:#000;background-image:url(image/bg.jpg);background-repeat:no-repeat; background-attachment:fixed;background-size:cover">
+  <nav class="navbar navbar-inverse" role="navigation">
+   <div class="navbar-header">
+      <a class="navbar-brand" href="/">乌有乡 - East Neverwhere</a>
+   </div>
+   <div>
+      <ul class="nav navbar-nav" id='menubar'></ul>
+   </div>
+</nav>
+      <div class="container">
+	  <div class="col-md-12" style="padding-bottom:60px">
+			<h2 class="form-signin-heading" style="color:#fff"><b>政治坐标测试</b></h2>
+		</div>		
+	  <div class="col-md-12" style='background-color: rgba(255, 255, 255, 0.8);'>
+		<br>
+                <p>本测试转载自政治坐标测试北大未名版之
+                  <a href="http://www.zuobiao.me/zuobiao2015/index.php/survey/index" target="_blank" rel="external">中国政治坐标系测试</a>。可惜的是，原网站似乎已经被干掉了，因此该测试的题目及数据处理逻辑源自
+                  <a href="http://www.mwjx.com/mwjx/iq_tests/tests_politics.html" target="_blank" rel="external">另一个网站</a>。</p>
+                <p>本来这个测试还是很有意义的，而且原作者那边利用测试统计来的数据还写了论文……但是原网站被封的现在数据无法访问，而且原文章中也没有对测试结果的解释，做完之后只能得到几个意味不明的
+                  <code>float</code>，可以说是十分可惜。</p>
+                <a id="more"></a>
+
+                <style>
+				.red{color:red}
+				#wrapper{text-align:center}
+				.iradio_square-green {padding-bottom:35px;}
+				li {list-style: none;}
+				</style>
+                <p>以下测试模仿著名的英文“
+                  <a href="https://www.politicalcompass.org/test" target="_blank" rel="external">政治指南针</a>”测试建立。题目经北大未名BBS读书版网友集体讨论创作，版权属于北大未名BBS读书版及相关网友。本blog对该测试的准确性及所造成的一切后果不负责。测试结果不能作为任何学术研究的依据。题目的陈述本身不代表出题人看法。本测试为匿名，本网站不收集任何测试者个人信息。</p>
+                <p>本测试的目的是反映答题者政治、经济与社会观念“左与右”的坐标。本测试系统建立于中国政治价值体系基础之上，试图充分反映中国的特殊国情与政治文化。很多问题反映的并非严格意义上的西方政治语汇中的“左右”，而是中国现实语境中的“左右”。测试题目的陈述尽量满足中立性，即，每条陈述都不存在严格意义上的对错，同意或反对都代表彼此平等的看法。
+                  <span class="red">请注意，这套题目的目的是区分理念而不是操作手法，也就是说，问题在于你在理想中是否支持，而不是在现实困难面前是否可行。请不要因为具体条件的缺乏而去设想种种复杂背景情况，从而动摇自己意识形态上的坚持。如果犹豫不定，请选择自己的第一直觉。</span></p>
+                <p>题目共五十道，必须全部回答。选项中没有中立项，这是为了迫使你选出你心里的倾向而不是回避你不愿意考虑的问题。</p>
+				
+				<hr>
+                <form id="questions">
+                  
+				  <ul class="list">
+					<h4>如果人民没有受过民主教育，他们是不应该拥有普选权的。</h4>
+                    <li>
+                      <input id='radio-1-1' name="c1" type="radio" data-x="2" data-y="0" data-z="0" checked>
+					  <label for="radio-1-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-1-2' name="c1" type="radio" data-x="1" data-y="0" data-z="0">
+					  <label for="radio-1-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-1-3' name="c1" type="radio" data-x="-1" data-y="0" data-z="0">
+					  <label for="radio-1-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-1-4' name="c1" type="radio" data-x="-2" data-y="0" data-z="0">
+					  <label for="radio-1-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>令人沮丧的是，经济学家越来越成为富人的代言人。</h4>
+                    <li>
+                      <input id='radio-2-1' name="c2" type="radio" data-x="0" data-y="2" data-z="0" checked>
+					  <label for="radio-2-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-2-2' name="c2" type="radio" data-x="0" data-y="1" data-z="0">
+					  <label for="radio-2-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-2-3' name="c2" type="radio" data-x="0" data-y="-1" data-z="0">
+					  <label for="radio-2-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-2-4' name="c2" type="radio" data-x="0" data-y="-2" data-z="0">
+					  <label for="radio-2-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>人权高于主权。</h4>
+                    <li>
+                      <input id='radio-3-1' name="c3" type="radio" data-x="-2" data-y="0" data-z="0" checked>
+					  <label for="radio-3-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-3-2' name="c3" type="radio" data-x="-1" data-y="0" data-z="0">
+					  <label for="radio-3-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-3-3' name="c3" type="radio" data-x="1" data-y="0" data-z="0">
+					  <label for="radio-3-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-3-4' name="c3" type="radio" data-x="2" data-y="0" data-z="0">
+					  <label for="radio-3-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+
+				  <ul class="list">
+					<h4>不应指责两个成年人自愿的婚前性行为。</h4>
+                    <li>
+                      <input id='radio-4-1' name="c4" type="radio" data-x="0" data-y="0" data-z="-2" checked>
+					  <label for="radio-4-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-4-2' name="c4" type="radio" data-x="0" data-y="0" data-z="-1">
+					  <label for="radio-4-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-4-3' name="c4" type="radio" data-x="0" data-y="0" data-z="1">
+					  <label for="radio-4-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-4-4' name="c4" type="radio" data-x="0" data-y="0" data-z="2">
+					  <label for="radio-4-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>中国近年来经济发展的成果很多都被一小群人占有了，大多数人没得到什么好处。</h4>
+                    <li>
+                      <input id='radio-5-1' name="c5" type="radio" data-x="0" data-y="2" data-z="0" checked>
+					  <label for="radio-5-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-5-2' name="c5" type="radio" data-x="0" data-y="1" data-z="0">
+					  <label for="radio-5-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-5-3' name="c5" type="radio" data-x="0" data-y="-1" data-z="0">
+					  <label for="radio-5-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-5-4' name="c5" type="radio" data-x="0" data-y="-2" data-z="0">
+					  <label for="radio-5-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>发生重大社会安全事件时，即使认为信息公开会导致骚乱的风险，政府仍应该开放信息传播。</h4>
+                    <li>
+                      <input id='radio-6-1' name="c6" type="radio" data-x="-2" data-y="0" data-z="0" checked>
+					  <label for="radio-6-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-6-2' name="c6" type="radio" data-x="-1" data-y="0" data-z="0">
+					  <label for="radio-6-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-6-3' name="c6" type="radio" data-x="1" data-y="0" data-z="0">
+					  <label for="radio-6-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-6-4' name="c6" type="radio" data-x="2" data-y="0" data-z="0">
+					  <label for="radio-6-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>在重大工程项目的决策中，个人利益应该为社会利益让路。</h4>
+                    <li>
+                      <input id='radio-7-1' name="c7" type="radio" data-x="0" data-y="2" data-z="0" checked>
+					  <label for="radio-7-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-7-2' name="c7" type="radio" data-x="0" data-y="1" data-z="0">
+					  <label for="radio-7-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-7-3' name="c7" type="radio" data-x="0" data-y="-1" data-z="0">
+					  <label for="radio-7-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-7-4' name="c7" type="radio" data-x="0" data-y="-2" data-z="0">
+					  <label for="radio-7-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>西方的多党制不适合中国国情。</h4>
+                    <li>
+                      <input id='radio-8-1' name="c8" type="radio" data-x="2" data-y="0" data-z="0" checked>
+					  <label for="radio-8-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-8-2' name="c8" type="radio" data-x="1" data-y="0" data-z="0">
+					  <label for="radio-8-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-8-3' name="c8" type="radio" data-x="-1" data-y="0" data-z="0">
+					  <label for="radio-8-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-8-4' name="c8" type="radio" data-x="-2" data-y="0" data-z="0">
+					  <label for="radio-8-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>不应当谈论或者在公开的文字中记录自己的长辈的缺点。</h4>
+                    <li>
+                      <input id='radio-9-1' name="c9" type="radio" data-x="0" data-y="0" data-z="2" checked>
+					  <label for="radio-9-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-9-2' name="c9" type="radio" data-x="0" data-y="0" data-z="1">
+					  <label for="radio-9-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-9-3' name="c9" type="radio" data-x="0" data-y="0" data-z="-1">
+					  <label for="radio-9-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-9-4' name="c9" type="radio" data-x="0" data-y="0" data-z="-2">
+					  <label for="radio-9-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>浪费粮食也是个人的自由。</h4>
+                    <li>
+                      <input id='radio-10-1' name="c10" type="radio" data-x="0" data-y="-2" data-z="0" checked>
+					  <label for="radio-10-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-10-2' name="c10" type="radio" data-x="0" data-y="-1" data-z="0">
+					  <label for="radio-10-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-10-3' name="c10" type="radio" data-x="0" data-y="1" data-z="0">
+					  <label for="radio-10-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-10-4' name="c10" type="radio" data-x="0" data-y="2" data-z="0">
+					  <label for="radio-10-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>在中国照搬西方式的言论自由会导致社会失序。</h4>
+                    <li>
+                      <input id='radio-11-1' name="c11" type="radio" data-x="2" data-y="0" data-z="0" checked>
+					  <label for="radio-11-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-11-2' name="c11" type="radio" data-x="1" data-y="0" data-z="0">
+					  <label for="radio-11-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-11-3' name="c11" type="radio" data-x="-1" data-y="0" data-z="0">
+					  <label for="radio-11-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-11-4' name="c11" type="radio" data-x="-2" data-y="0" data-z="0">
+					  <label for="radio-11-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>现代中国社会需要儒家思想。</h4>
+                    <li>
+                      <input id='radio-12-1' name="c12" type="radio" data-x="0" data-y="0" data-z="2" checked>
+					  <label for="radio-12-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-12-2' name="c12" type="radio" data-x="0" data-y="0" data-z="1">
+					  <label for="radio-12-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-12-3' name="c12" type="radio" data-x="0" data-y="0" data-z="-1">
+					  <label for="radio-12-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-12-4' name="c12" type="radio" data-x="0" data-y="0" data-z="-2">
+					  <label for="radio-12-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>为保障社会公平，对富人征税应采用更高的税率。</h4>
+                    <li>
+                      <input id='radio-13-1' name="c13" type="radio" data-x="0" data-y="2" data-z="0" checked>
+					  <label for="radio-13-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-13-2' name="c13" type="radio" data-x="0" data-y="1" data-z="0">
+					  <label for="radio-13-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-13-3' name="c13" type="radio" data-x="0" data-y="-1" data-z="0">
+					  <label for="radio-13-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-13-4' name="c13" type="radio" data-x="0" data-y="-2" data-z="0">
+					  <label for="radio-13-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>由高校自主考试招生比全国统一考试招生更好。</h4>
+                    <li>
+                      <input id='radio-14-1' name="c14" type="radio" data-x="-2" data-y="0" data-z="0" checked>
+					  <label for="radio-14-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-14-2' name="c14" type="radio" data-x="-1" data-y="0" data-z="0">
+					  <label for="radio-14-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-14-3' name="c14" type="radio" data-x="1" data-y="0" data-z="0">
+					  <label for="radio-14-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-14-4' name="c14" type="radio" data-x="2" data-y="0" data-z="0">
+					  <label for="radio-14-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>应当对国外同类产品征收高额关税来保护国内民族工业。</h4>
+                    <li>
+                      <input id='radio-15-1' name="c15" type="radio" data-x="0" data-y="2" data-z="0" checked>
+					  <label for="radio-15-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-15-2' name="c15" type="radio" data-x="0" data-y="1" data-z="0">
+					  <label for="radio-15-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-15-3' name="c15" type="radio" data-x="0" data-y="-1" data-z="0">
+					  <label for="radio-15-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-15-4' name="c15" type="radio" data-x="0" data-y="-2" data-z="0">
+					  <label for="radio-15-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+
+				  <ul class="list">
+					<h4>应该容许宗教人士在非宗教场所公开传教。</h4>
+                    <li>
+                      <input id='radio-16-1' name="c16" type="radio" data-x="-2" data-y="0" data-z="0" checked>
+					  <label for="radio-16-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-16-2' name="c16" type="radio" data-x="-1" data-y="0" data-z="0">
+					  <label for="radio-16-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-16-3' name="c16" type="radio" data-x="1" data-y="0" data-z="0">
+					  <label for="radio-16-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-16-4' name="c16" type="radio" data-x="2" data-y="0" data-z="0">
+					  <label for="radio-16-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>任何艺术作品，只要有很多人愿意花钱去欣赏，就不能说它毫无艺术价值。</h4>
+                    <li>
+                      <input id='radio-17-1' name="c17" type="radio" data-x="0" data-y="0" data-z="-2" checked>
+					  <label for="radio-17-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-17-2' name="c17" type="radio" data-x="0" data-y="0" data-z="-1">
+					  <label for="radio-17-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-17-3' name="c17" type="radio" data-x="0" data-y="0" data-z="1">
+					  <label for="radio-17-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-17-4' name="c17" type="radio" data-x="0" data-y="0" data-z="2">
+					  <label for="radio-17-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>在华外国资本应该受到限制，不能任意发展。</h4>
+                    <li>
+                      <input id='radio-18-1' name="c18" type="radio" data-x="0" data-y="2" data-z="0" checked>
+					  <label for="radio-18-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-18-2' name="c18" type="radio" data-x="0" data-y="1" data-z="0">
+					  <label for="radio-18-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-18-3' name="c18" type="radio" data-x="0" data-y="-1" data-z="0">
+					  <label for="radio-18-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-18-4' name="c18" type="radio" data-x="0" data-y="-2" data-z="0">
+					  <label for="radio-18-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>无论中小学生或大学生，都应参加由国家统一安排的军训。</h4>
+                    <li>
+                      <input id='radio-19-1' name="c19" type="radio" data-x="2" data-y="0" data-z="0" checked>
+					  <label for="radio-19-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-19-2' name="c19" type="radio" data-x="1" data-y="0" data-z="0">
+					  <label for="radio-19-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-19-3' name="c19" type="radio" data-x="-1" data-y="0" data-z="0">
+					  <label for="radio-19-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-19-4' name="c19" type="radio" data-x="-2" data-y="0" data-z="0">
+					  <label for="radio-19-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>集体财产比私有财产更应当保护。</h4>
+                    <li>
+                      <input id='radio-20-1' name="c20" type="radio" data-x="0" data-y="2" data-z="0" checked>
+					  <label for="radio-20-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-20-2' name="c20" type="radio" data-x="0" data-y="1" data-z="0">
+					  <label for="radio-20-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-20-3' name="c20" type="radio" data-x="0" data-y="-1" data-z="0">
+					  <label for="radio-20-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-20-4' name="c20" type="radio" data-x="0" data-y="-2" data-z="0">
+					  <label for="radio-20-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>试图控制房地产价格的行为是不可行的，会破坏经济发展，给社会带来危害。</h4>
+                    <li>
+                      <input id='radio-21-1' name="c21" type="radio" data-x="0" data-y="-2" data-z="0" checked>
+					  <label for="radio-21-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-21-2' name="c21" type="radio" data-x="0" data-y="-1" data-z="0">
+					  <label for="radio-21-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-21-3' name="c21" type="radio" data-x="0" data-y="1" data-z="0">
+					  <label for="radio-21-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-21-4' name="c21" type="radio" data-x="0" data-y="2" data-z="0">
+					  <label for="radio-21-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>国家的统一和领土完整是社会的最高利益。</h4>
+                    <li>
+                      <input id='radio-22-1' name="c22" type="radio" data-x="2" data-y="0" data-z="0" checked>
+					  <label for="radio-22-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-22-2' name="c22" type="radio" data-x="1" data-y="0" data-z="0">
+					  <label for="radio-22-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-22-3' name="c22" type="radio" data-x="-1" data-y="0" data-z="0">
+					  <label for="radio-22-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-22-4' name="c22" type="radio" data-x="-2" data-y="0" data-z="0">
+					  <label for="radio-22-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>改善低收入者生活的首要手段是国家给予财政补贴和扶持。</h4>
+                    <li>
+                      <input id='radio-23-1' name="c23" type="radio" data-x="0" data-y="2" data-z="0" checked>
+					  <label for="radio-23-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-23-2' name="c23" type="radio" data-x="0" data-y="1" data-z="0">
+					  <label for="radio-23-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-23-3' name="c23" type="radio" data-x="0" data-y="-1" data-z="0">
+					  <label for="radio-23-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-23-4' name="c23" type="radio" data-x="0" data-y="-2" data-z="0">
+					  <label for="radio-23-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>以美国为首的西方国家不可能真正容许中国崛起成为一流强国。</h4>
+                    <li>
+                      <input id='radio-24-1' name="c24" type="radio" data-x="2" data-y="0" data-z="0" checked>
+					  <label for="radio-24-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-24-2' name="c24" type="radio" data-x="1" data-y="0" data-z="0">
+					  <label for="radio-24-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-24-3' name="c24" type="radio" data-x="-1" data-y="0" data-z="0">
+					  <label for="radio-24-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-24-4' name="c24" type="radio" data-x="-2" data-y="0" data-z="0">
+					  <label for="radio-24-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>个人有权利决定自己要不要孩子，要几个孩子。</h4>
+                    <li>
+                      <input id='radio-25-1' name="c25" type="radio" data-x="0" data-y="0" data-z="-2" checked>
+					  <label for="radio-25-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-25-2' name="c25" type="radio" data-x="0" data-y="0" data-z="-1">
+					  <label for="radio-25-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-25-3' name="c25" type="radio" data-x="0" data-y="0" data-z="1">
+					  <label for="radio-25-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-25-4' name="c25" type="radio" data-x="0" data-y="0" data-z="2">
+					  <label for="radio-25-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>即使会导致国有资产的减少，国有企业也不应该在市场竞争中享有特殊的保护。</h4>
+                    <li>
+                      <input id='radio-26-1' name="c26" type="radio" data-x="0" data-y="-2" data-z="0" checked>
+					  <label for="radio-26-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-26-2' name="c26" type="radio" data-x="0" data-y="-1" data-z="0">
+					  <label for="radio-26-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-26-3' name="c26" type="radio" data-x="0" data-y="1" data-z="0">
+					  <label for="radio-26-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-26-4' name="c26" type="radio" data-x="0" data-y="2" data-z="0">
+					  <label for="radio-26-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>应当保证代表全体人民利益的官方新闻机构的存在。</h4>
+                    <li>
+                      <input id='radio-27-1' name="c27" type="radio" data-x="2" data-y="0" data-z="0" checked>
+					  <label for="radio-27-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-27-2' name="c27" type="radio" data-x="1" data-y="0" data-z="0">
+					  <label for="radio-27-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-27-3' name="c27" type="radio" data-x="-1" data-y="0" data-z="0">
+					  <label for="radio-27-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-27-4' name="c27" type="radio" data-x="-2" data-y="0" data-z="0">
+					  <label for="radio-27-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>高收入者应该公开自己的经济来源。</h4>
+                    <li>
+                      <input id='radio-28-1' name="c28" type="radio" data-x="0" data-y="2" data-z="0" checked>
+					  <label for="radio-28-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-28-2' name="c28" type="radio" data-x="0" data-y="1" data-z="0">
+					  <label for="radio-28-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-28-3' name="c28" type="radio" data-x="0" data-y="-1" data-z="0">
+					  <label for="radio-28-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-28-4' name="c28" type="radio" data-x="0" data-y="-2" data-z="0">
+					  <label for="radio-28-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>国家领导人的形象可以出现在漫画中。</h4>
+                    <li>
+                      <input id='radio-29-1' name="c29" type="radio" data-x="-2" data-y="0" data-z="0" checked>
+					  <label for="radio-29-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-29-2' name="c29" type="radio" data-x="-1" data-y="0" data-z="0">
+					  <label for="radio-29-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-29-3' name="c29" type="radio" data-x="1" data-y="0" data-z="0">
+					  <label for="radio-29-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-29-4' name="c29" type="radio" data-x="2" data-y="0" data-z="0">
+					  <label for="radio-29-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>周易八卦是老祖宗智慧的结晶，能够有效的解释很多事情。</h4>
+                    <li>
+                      <input id='radio-30-1' name="c30" type="radio" data-x="0" data-y="0" data-z="2" checked>
+					  <label for="radio-30-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-30-2' name="c30" type="radio" data-x="0" data-y="0" data-z="1">
+					  <label for="radio-30-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-30-3' name="c30" type="radio" data-x="0" data-y="0" data-z="-1">
+					  <label for="radio-30-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-30-4' name="c30" type="radio" data-x="0" data-y="0" data-z="-2">
+					  <label for="radio-30-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>劫富济贫是行侠仗义。</h4>
+                    <li>
+                      <input id='radio-31-1' name="c31" type="radio" data-x="0" data-y="2" data-z="0" checked>
+					  <label for="radio-31-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-31-2' name="c31" type="radio" data-x="0" data-y="1" data-z="0">
+					  <label for="radio-31-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-31-3' name="c31" type="radio" data-x="0" data-y="-1" data-z="0">
+					  <label for="radio-31-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-31-4' name="c31" type="radio" data-x="0" data-y="-2" data-z="0">
+					  <label for="radio-31-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>当法律未能充分制止罪恶行为时，通过极端手段对犯罪进行制裁是可以容忍的。</h4>
+                    <li>
+                      <input id='radio-32-1' name="c32" type="radio" data-x="2" data-y="0" data-z="0" checked>
+					  <label for="radio-32-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-32-2' name="c32" type="radio" data-x="1" data-y="0" data-z="0">
+					  <label for="radio-32-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-32-3' name="c32" type="radio" data-x="-1" data-y="0" data-z="0">
+					  <label for="radio-32-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-32-4' name="c32" type="radio" data-x="-2" data-y="0" data-z="0">
+					  <label for="radio-32-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>中国传统医学具有一些现代主流医学不能比拟的优势。</h4>
+                    <li>
+                      <input id='radio-33-1' name="c33" type="radio" data-x="0" data-y="0" data-z="2" checked>
+					  <label for="radio-33-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-33-2' name="c33" type="radio" data-x="0" data-y="0" data-z="1">
+					  <label for="radio-33-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-33-3' name="c33" type="radio" data-x="0" data-y="0" data-z="-1">
+					  <label for="radio-33-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-33-4' name="c33" type="radio" data-x="0" data-y="0" data-z="-2">
+					  <label for="radio-33-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>与其让公有制企业亏损破产，不如转卖给资本家。</h4>
+                    <li>
+                      <input id='radio-34-1' name="c34" type="radio" data-x="0" data-y="-2" data-z="0" checked>
+					  <label for="radio-34-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-34-2' name="c34" type="radio" data-x="0" data-y="-1" data-z="0">
+					  <label for="radio-34-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-34-3' name="c34" type="radio" data-x="0" data-y="1" data-z="0">
+					  <label for="radio-34-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-34-4' name="c34" type="radio" data-x="0" data-y="2" data-z="0">
+					  <label for="radio-34-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>国家没有义务进行对外援助。</h4>
+                    <li>
+                      <input id='radio-35-1' name="c35" type="radio" data-x="-2" data-y="0" data-z="0" checked>
+					  <label for="radio-35-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-35-2' name="c35" type="radio" data-x="-1" data-y="0" data-z="0">
+					  <label for="radio-35-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-35-3' name="c35" type="radio" data-x="1" data-y="0" data-z="0">
+					  <label for="radio-35-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-35-4' name="c35" type="radio" data-x="2" data-y="0" data-z="0">
+					  <label for="radio-35-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>那些关系到国家安全、以及其他重要国计民生的领域，必须全部由国有企业掌控。</h4>
+                    <li>
+                      <input id='radio-36-1' name="c36" type="radio" data-x="0" data-y="2" data-z="0" checked>
+					  <label for="radio-36-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-36-2' name="c36" type="radio" data-x="0" data-y="1" data-z="0">
+					  <label for="radio-36-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-36-3' name="c36" type="radio" data-x="0" data-y="-1" data-z="0">
+					  <label for="radio-36-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-36-4' name="c36" type="radio" data-x="0" data-y="-2" data-z="0">
+					  <label for="radio-36-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>如果国家综合实力许可，那么中国有权为了维护自己的利益而采取任何行动。</h4>
+                    <li>
+                      <input id='radio-37-1' name="c37" type="radio" data-x="2" data-y="0" data-z="0" checked>
+					  <label for="radio-37-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-37-2' name="c37" type="radio" data-x="1" data-y="0" data-z="0">
+					  <label for="radio-37-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-37-3' name="c37" type="radio" data-x="-1" data-y="0" data-z="0">
+					  <label for="radio-37-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-37-4' name="c37" type="radio" data-x="-2" data-y="0" data-z="0">
+					  <label for="radio-37-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>电视机构应当尽量制作格调高雅的节目，而不是只追求高收视率。</h4>
+                    <li>
+                      <input id='radio-38-1' name="c38" type="radio" data-x="0" data-y="0" data-z="2" checked>
+					  <label for="radio-38-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-38-2' name="c38" type="radio" data-x="0" data-y="0" data-z="1">
+					  <label for="radio-38-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-38-3' name="c38" type="radio" data-x="0" data-y="0" data-z="-1">
+					  <label for="radio-38-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-38-4' name="c38" type="radio" data-x="0" data-y="0" data-z="-2">
+					  <label for="radio-38-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>资本积累的过程总是伴随着对普通劳动人民利益的伤害。</h4>
+                    <li>
+                      <input id='radio-39-1' name="c39" type="radio" data-x="0" data-y="2" data-z="0" checked>
+					  <label for="radio-39-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-39-2' name="c39" type="radio" data-x="0" data-y="1" data-z="0">
+					  <label for="radio-39-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-39-3' name="c39" type="radio" data-x="0" data-y="-1" data-z="0">
+					  <label for="radio-39-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-39-4' name="c39" type="radio" data-x="0" data-y="-2" data-z="0">
+					  <label for="radio-39-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>条件允许的话应该武力攻台，台独者死不足惜。</h4>
+                    <li>
+                      <input id='radio-40-1' name="c40" type="radio" data-x="2" data-y="0" data-z="0" checked>
+					  <label for="radio-40-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-40-2' name="c40" type="radio" data-x="1" data-y="0" data-z="0">
+					  <label for="radio-40-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-40-3' name="c40" type="radio" data-x="-1" data-y="0" data-z="0">
+					  <label for="radio-40-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-40-4' name="c40" type="radio" data-x="-2" data-y="0" data-z="0">
+					  <label for="radio-40-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>将传统文化的经典作品作为儿童的主要读物是值得称赞的。</h4>
+                    <li>
+                      <input id='radio-41-1' name="c41" type="radio" data-x="0" data-y="0" data-z="2" checked>
+					  <label for="radio-41-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-41-2' name="c41" type="radio" data-x="0" data-y="0" data-z="1">
+					  <label for="radio-41-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-41-3' name="c41" type="radio" data-x="0" data-y="0" data-z="-1">
+					  <label for="radio-41-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-41-4' name="c41" type="radio" data-x="0" data-y="0" data-z="-2">
+					  <label for="radio-41-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>即使中国的市场经济出现危机或萧条，也不应当考虑退回计划经济体制。</h4>
+                    <li>
+                      <input id='radio-42-1' name="c42" type="radio" data-x="0" data-y="-2" data-z="0" checked>
+					  <label for="radio-42-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-42-2' name="c42" type="radio" data-x="0" data-y="-1" data-z="0">
+					  <label for="radio-42-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-42-3' name="c42" type="radio" data-x="0" data-y="1" data-z="0">
+					  <label for="radio-42-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-42-4' name="c42" type="radio" data-x="0" data-y="2" data-z="0">
+					  <label for="radio-42-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>军队应当国家化。</h4>
+                    <li>
+                      <input id='radio-43-1' name="c43" type="radio" data-x="-2" data-y="0" data-z="0" checked>
+					  <label for="radio-43-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-43-2' name="c43" type="radio" data-x="-1" data-y="0" data-z="0">
+					  <label for="radio-43-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-43-3' name="c43" type="radio" data-x="1" data-y="0" data-z="0">
+					  <label for="radio-43-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-43-4' name="c43" type="radio" data-x="2" data-y="0" data-z="0">
+					  <label for="radio-43-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>政府应当提高粮食收购价格以增加农民收入。</h4>
+                    <li>
+                      <input id='radio-44-1' name="c44" type="radio" data-x="0" data-y="2" data-z="0" checked>
+					  <label for="radio-44-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-44-2' name="c44" type="radio" data-x="0" data-y="1" data-z="0">
+					  <label for="radio-44-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-44-3' name="c44" type="radio" data-x="0" data-y="-1" data-z="0">
+					  <label for="radio-44-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-44-4' name="c44" type="radio" data-x="0" data-y="-2" data-z="0">
+					  <label for="radio-44-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>应该允许公民在获得外国国籍之后依然保留中国国籍。</h4>
+                    <li>
+                      <input id='radio-45-1' name="c45" type="radio" data-x="-2" data-y="0" data-z="0" checked>
+					  <label for="radio-45-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-45-2' name="c45" type="radio" data-x="-1" data-y="0" data-z="0">
+					  <label for="radio-45-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-45-3' name="c45" type="radio" data-x="1" data-y="0" data-z="0">
+					  <label for="radio-45-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-45-4' name="c45" type="radio" data-x="2" data-y="0" data-z="0">
+					  <label for="radio-45-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>同性恋对社会没有危害，人们应该接纳同性恋者。</h4>
+                    <li>
+                      <input id='radio-46-1' name="c46" type="radio" data-x="0" data-y="0" data-z="-2" checked>
+					  <label for="radio-46-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-46-2' name="c46" type="radio" data-x="0" data-y="0" data-z="-1">
+					  <label for="radio-46-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-46-3' name="c46" type="radio" data-x="0" data-y="0" data-z="1">
+					  <label for="radio-46-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-46-4' name="c46" type="radio" data-x="0" data-y="0" data-z="2">
+					  <label for="radio-46-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>能在国际市场上买到的先进科技产品，我们没必要自行研制。</h4>
+                    <li>
+                      <input id='radio-47-1' name="c47" type="radio" data-x="0" data-y="-2" data-z="0" checked>
+					  <label for="radio-47-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-47-2' name="c47" type="radio" data-x="0" data-y="-1" data-z="0">
+					  <label for="radio-47-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-47-3' name="c47" type="radio" data-x="0" data-y="1" data-z="0">
+					  <label for="radio-47-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-47-4' name="c47" type="radio" data-x="0" data-y="2" data-z="0">
+					  <label for="radio-47-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>哪怕经历了违反程序规定的审讯和取证过程，罪大恶极的人也应被处以死刑。</h4>
+                    <li>
+                      <input id='radio-48-1' name="c48" type="radio" data-x="2" data-y="0" data-z="0" checked>
+					  <label for="radio-48-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-48-2' name="c48" type="radio" data-x="1" data-y="0" data-z="0">
+					  <label for="radio-48-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-48-3' name="c48" type="radio" data-x="-1" data-y="0" data-z="0">
+					  <label for="radio-48-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-48-4' name="c48" type="radio" data-x="-2" data-y="0" data-z="0">
+					  <label for="radio-48-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>政府不应当干预猪肉价格。</h4>
+                    <li>
+                      <input id='radio-49-1' name="c49" type="radio" data-x="0" data-y="-2" data-z="0" checked>
+					  <label for="radio-49-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-49-2' name="c49" type="radio" data-x="0" data-y="-1" data-z="0">
+					  <label for="radio-49-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-49-3' name="c49" type="radio" data-x="0" data-y="1" data-z="0">
+					  <label for="radio-49-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-49-4' name="c49" type="radio" data-x="0" data-y="2" data-z="0">
+					  <label for="radio-49-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+				  
+				  <ul class="list">
+					<h4>国家应当采取措施培养和支持体育健儿在各种国际比赛场合为国争光。</h4>
+                    <li>
+                      <input id='radio-50-1' name="c50" type="radio" data-x="2" data-y="0" data-z="0" checked>
+					  <label for="radio-50-1">强烈反对</label>
+					</li>
+                    <li>
+                      <input id='radio-50-2' name="c50" type="radio" data-x="1" data-y="0" data-z="0">
+					  <label for="radio-50-2">反对</label>
+                    </li>
+					<li>
+                      <input id='radio-50-3' name="c50" type="radio" data-x="-1" data-y="0" data-z="0">
+					  <label for="radio-50-3">同意</label>
+                     </li>
+					<li>
+                      <input id='radio-50-4' name="c50" type="radio" data-x="-2" data-y="0" data-z="0">
+					  <label for="radio-50-4">强烈同意</label>
+                     </li>
+				  </ul>
+				  <hr>
+                </form>
+                <div id="wrapper">
+                  <button id="submit" type="button" class="btn btn-success" style='width:150px'>提交</button>
+                  <br>
+                  <span id="answer" class="red"></span>
+                </div>
+                <hr>
+                <p>X坐标反映政治观念，负值为左(
+                  <a href="https://en.wikipedia.org/wiki/Authoritarianism" target="_blank" rel="external">独裁主义</a>)，正值为右(
+                  <a href="https://en.wikipedia.org/wiki/Libertarianism" target="_blank" rel="external">自由意志主义</a>)。
+                  <br>Y坐标反映经济观念，负值为左(
+                  <a href="https://en.wikipedia.org/wiki/Communism" target="_blank" rel="external">共产主义</a>,
+                  <a href="https://en.wikipedia.org/wiki/Collectivism" target="_blank" rel="external">集体主义</a>)，正值为右(
+                  <a href="https://en.wikipedia.org/wiki/Neoliberalism" target="_blank" rel="external">新自由主义</a>)。
+                  <br>Z坐标反映社会文化观念，负值为
+                  <a href="https://en.wikipedia.org/wiki/Conservatism" target="_blank" rel="external">保守主义</a>，正值为
+                  <a href="https://en.wikipedia.org/wiki/Liberalism" target="_blank" rel="external">自由主义</a>。</p>
+				  
+				  <span>作者:</span>Dr. A. Clef
+				  <br>
+				  <span>发布日期:</span>2017-03-16
+				  <br>
+				  <span>修改日期:</span>2017-06-10
+				  <br>
+				  <span>发布协议:</span>
+				  <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank">BY-SA</a>
+			
+	  </div>
+	  
+
+    </div> <!-- /container -->
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/icheck.min.js"></script>
+	<script src="js/menubar.js"></script>
+	<script type="text/javascript">
+	
+	
+		$(function() {
+		
+			$('input').iCheck({
+				checkboxClass: 'icheckbox_square-green',
+				radioClass: 'iradio_square-green',
+				increaseArea: '20%' // optional
+			  });
+		
+		
+		
+		
+			$("#submit").click(function() {
+			  var t = 0,
+			  a = 0,
+			  n = 0;
+			  $('#questions input[name^="c"]:checked').each(function() {
+				t += parseInt($(this).attr("data-x")),
+				a += parseInt($(this).attr("data-y")),
+				n += parseInt($(this).attr("data-z"))
+			  }),
+			  t = Math.round(t) / 20,
+			  a = Math.round(a) / 20,
+			  n = Math.round(n) / 10,
+			  $("#answer").html("<br>政治立场坐标（左翼<->右翼）" + t + "<br>经济立场坐标（左翼<->右翼）" + a + "<br>文化立场坐标（保守<->自由）" + n)
+			})
+		  });
+	</script>
+
+	
+  </body>
+</html>
